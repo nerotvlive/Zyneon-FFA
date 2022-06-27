@@ -28,6 +28,10 @@ public class PlayerJoin implements Listener {
         p.teleport(Bukkit.getWorld("FFA").getSpawnLocation());
         p.setExp(0);
         p.setLevel(0);
-        e.setJoinMessage("§8» §a"+p.getName());
+        for(Player all:Bukkit.getOnlinePlayers()) {
+            if(all.getUniqueId()!=p.getUniqueId()) {
+                all.sendMessage("§8» §a"+p.getName());
+            }
+        }
     }
 }
