@@ -14,6 +14,7 @@ public class PlayerJoin implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
         Player p = e.getPlayer();
+        e.setJoinMessage(null);
         ItemManager.getItems(p);
         API.renewScoreboard(p);
         p.setInvulnerable(false);
