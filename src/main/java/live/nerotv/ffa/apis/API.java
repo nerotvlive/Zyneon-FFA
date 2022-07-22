@@ -195,11 +195,11 @@ public class API {
         int state = animatedState;
         String string = "§fFFA";
         if(state == 1) {
-            string = "§d§lF§fFA";
+            string = "§9§lF§fFA";
         } else if(state == 2) {
-            string = "§fF§d§lF§fA";
+            string = "§fF§9§lF§fA";
         } else if(state == 3) {
-            string = "§fFF§d§lA";
+            string = "§fFF§9§lA";
         }
         return string;
     }

@@ -13,7 +13,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Main extends JavaPlugin {
 
-    public static String PN() { return "§dFFA §8» §7"; }
+    public static String PN() { return "§9FFA §8» §7"; }
     public static PluginManager PM = Bukkit.getPluginManager();
     private static Main instance;
     public static Main getInstance() { return instance; }
@@ -33,7 +33,6 @@ public final class Main extends JavaPlugin {
         API.initListeners(new PlayerInventory());
         API.initListeners(new PlayerJoin());
         API.initListeners(new PlayerQuit());
-        API.initListeners(new PlayerChat());
         API.date = API.getTime();
         BroadcastManager.send();
         Bukkit.createWorld(new WorldCreator("FFA"));
@@ -54,7 +53,7 @@ public final class Main extends JavaPlugin {
         ConfigAPI.checkEntry("Core.Settings.MySQL.password","password",ConfigAPI.Config,ConfigAPI.CFG);
 
         //TABLIST
-        ConfigAPI.checkEntry("Core.Tablist.Header"," \n §5 §8● §7Minecraft - aber mehr \n ",ConfigAPI.Config,ConfigAPI.CFG);
+        ConfigAPI.checkEntry("Core.Tablist.Header"," \n §9 §8● §7Minecraft - aber mehr \n ",ConfigAPI.Config,ConfigAPI.CFG);
         ConfigAPI.checkEntry("Core.Tablist.Footer"," \n §9https://www.zyneonstudios.com \n §7sponsored by §ftube-hosting.de \n ",ConfigAPI.Config,ConfigAPI.CFG);
 
         ConfigAPI.saveConfig(ConfigAPI.Config,ConfigAPI.CFG);
@@ -68,10 +67,10 @@ public final class Main extends JavaPlugin {
             Scoreboard.registerNewTeam("01Creator");
             Scoreboard.registerNewTeam("02Premium");
             Scoreboard.registerNewTeam("03Spieler");
-            Scoreboard.getTeam("00000Team").setPrefix("§5Team §8● §f");
-            Scoreboard.getTeam("01Creator").setPrefix("§5Creator §8● §f");
-            Scoreboard.getTeam("02Premium").setPrefix("§dPremium §8● §f");
-            Scoreboard.getTeam("03Spieler").setPrefix("§dUser §8● §f");
+            Scoreboard.getTeam("00000Team").setPrefix("§9Team §8● §f");
+            Scoreboard.getTeam("01Creator").setPrefix("§9Creator §8● §f");
+            Scoreboard.getTeam("02Premium").setPrefix("§9Premium §8● §f");
+            Scoreboard.getTeam("03Spieler").setPrefix("§9User §8● §f");
             Scoreboard.getTeam("00000Team").setCanSeeFriendlyInvisibles(false);
             Scoreboard.getTeam("01Creator").setCanSeeFriendlyInvisibles(false);
             Scoreboard.getTeam("02Premium").setCanSeeFriendlyInvisibles(false);
